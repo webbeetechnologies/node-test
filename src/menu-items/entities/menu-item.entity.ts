@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('menu_items')
+@Entity()
 export class MenuItem {
   @PrimaryGeneratedColumn()
   id: number;
@@ -12,11 +12,8 @@ export class MenuItem {
   url: string;
 
   @Column({ type: 'integer', default: null })
-  parent_id: number;
+  parentId: number;
 
   @Column({ type: 'datetime' })
-  created_at: string;
-
-  @Column({ type: 'datetime' })
-  updated_at: string;
+  createdAt: string;
 }

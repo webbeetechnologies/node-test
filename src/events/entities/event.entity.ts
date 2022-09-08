@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('events')
+@Entity()
 export class Event {
   @PrimaryGeneratedColumn()
   id: number;
@@ -9,8 +9,5 @@ export class Event {
   name: string;
 
   @Column({ type: 'datetime' })
-  created_at: string;
-
-  @Column({ type: 'datetime' })
-  updated_at: string;
+  createdAt: string;
 }

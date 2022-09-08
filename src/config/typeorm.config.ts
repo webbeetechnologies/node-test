@@ -12,7 +12,7 @@ export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
     return {
       type: 'mysql',
       host: process.env.DB_HOST,
-      port: parseInt(process.env.DB_PORT, 10),
+      port: process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : 3306,
       username: process.env.DB_USERNAME,
       database: process.env.DB_NAME,
       password: process.env.DB_PASSWORD,
@@ -35,7 +35,7 @@ export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
 export const typeOrmConfig: TypeOrmModuleOptions = {
   type: 'mysql',
   host: process.env.DB_HOST,
-  port: parseInt(process.env.DB_PORT, 10),
+  port: process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : 3306,
   username: process.env.DB_USERNAME,
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,

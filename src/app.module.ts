@@ -1,19 +1,18 @@
 import { Module } from '@nestjs/common';
-import { MenuController } from './menu.controller';
-import { EventController } from './event.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmAsyncConfig } from './config/typeorm.config';
-import { ConfigModule } from '@nestjs/config';
-import { Event } from './entities/event.entity';
-import { Workshop } from './entities/workshop.entity';
-import { MenuItem } from './entities/menu.entity';
-@Module({
+import { EventsModule } from './events/events.module';
+import { MenuItemsModule } from './menu-items/menu-items.module';
+
+export const appModuleConfig = {
   imports: [
-    ConfigModule.forRoot(),
     TypeOrmModule.forRootAsync(typeOrmAsyncConfig),
-    TypeOrmModule.forFeature([Event, Workshop, MenuItem]),
+    EventsModule,
+    MenuItemsModule,
   ],
-  controllers: [MenuController, EventController],
+  controllers: [],
   providers: [],
-})
+};
+
+@Module(appModuleConfig)
 export class AppModule {}
