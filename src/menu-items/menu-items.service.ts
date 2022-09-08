@@ -85,6 +85,6 @@ export class MenuItemsService {
     ]
   */
   async getMenuItems() {
-    throw new Error('TODO');
+    throw new Error('TODO in task 3');
   }
 }

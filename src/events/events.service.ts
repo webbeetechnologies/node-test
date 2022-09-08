@@ -91,7 +91,7 @@ export class EventsService {
 
   @Get('events')
   async getEventsWithWorkshops() {
-    throw new Error('TODO');
+    throw new Error('TODO task 1');
   }
 
   /*
@@ -162,6 +162,6 @@ export class EventsService {
 
   @Get('futureevents')
   async getFutureEventWithWorkshops() {
-    throw new Error('TODO');
+    throw new Error('TODO task 2');
   }
 }
