@@ -23,14 +23,14 @@ export class DbSetUp1661860035294 implements MigrationInterface {
         columns: [
           {
             name: 'id',
-            type: 'int',
+            type: 'integer',
             isPrimary: true,
             isGenerated: true,
             generationStrategy: 'increment',
           },
           { name: 'name', type: 'varchar' },
           { name: 'url', type: 'varchar' },
-          { name: 'parentId', type: 'int', isNullable: true },
+          { name: 'parentId', type: 'integer', isNullable: true },
           {
             name: 'createdAt',
             type: 'timestamp',
@@ -56,7 +56,7 @@ export class DbSetUp1661860035294 implements MigrationInterface {
         columns: [
           {
             name: 'id',
-            type: 'int',
+            type: 'integer',
             isPrimary: true,
             isGenerated: true,
             generationStrategy: 'increment',
@@ -77,13 +77,13 @@ export class DbSetUp1661860035294 implements MigrationInterface {
         columns: [
           {
             name: 'id',
-            type: 'int',
+            type: 'integer',
             isPrimary: true,
             isGenerated: true,
             generationStrategy: 'increment',
           },
           { name: 'name', type: 'varchar' },
-          { name: 'eventId', type: 'int' },
+          { name: 'eventId', type: 'integer' },
           {
             name: 'createdAt',
             type: 'timestamp',

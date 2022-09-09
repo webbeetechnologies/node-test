@@ -15,14 +15,14 @@ export class EventsService {
   }
 
   /*
-     Requirements:
+    Requirements:
     - maximum 2 sql queries
     - verify your solution with `npm run test`
     - do a `git commit && git push` after you are done or when the time limit is over
     Hints:
     - open the `src/events/events.service` file
     - partial or not working answers also get graded so make sure you commit what you have
-    Sample response on GET /events:
+    Sample response on GET /events/events:
     ```json
     [
       {
@@ -87,6 +87,7 @@ export class EventsService {
         ],
       },
     ]
+    ```
      */
 
   @Get('events')
@@ -159,7 +160,6 @@ export class EventsService {
     ]
     ```
      */
-
   @Get('futureevents')
   async getFutureEventWithWorkshops() {
     throw new Error('TODO task 2');

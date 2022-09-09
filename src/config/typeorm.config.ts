@@ -10,12 +10,10 @@ export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
   inject: [ConfigService],
   useFactory: async (): Promise<TypeOrmModuleOptions> => {
     return {
-      type: 'mysql',
-      host: process.env.DB_HOST,
-      port: process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : 3306,
-      username: process.env.DB_USERNAME,
-      database: process.env.DB_NAME,
-      password: process.env.DB_PASSWORD,
+      type: 'sqlite',
+      // entities: [join(__dirname, '**', '*.entity.{ts,js}')],
+      // entities: [Event],
+      database: 'database.db',
       entities: [__dirname + '/../entities/*.entity.{js,ts}'],
       migrations: [__dirname + '/../database/migrations/*{.ts,.js}'],
       //   cli: {
@@ -33,12 +31,10 @@ export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
 };
 
 export const typeOrmConfig: TypeOrmModuleOptions = {
-  type: 'mysql',
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : 3306,
-  username: process.env.DB_USERNAME,
-  database: process.env.DB_NAME,
-  password: process.env.DB_PASSWORD,
+  type: 'sqlite',
+  // entities: [join(__dirname, '**', '*.entity.{ts,js}')],
+  // entities: [Event],
+  database: 'database.db',
   entities: [__dirname + '/../entities/*.entity.{js,ts}'],
   migrations: [__dirname + '/../database/migrations/*{.ts,.js}'],
   //   cli: {

@@ -18,7 +18,6 @@ export class MenuItemsService {
     - do a `git commit && git push` after you are done or when the time limit is over
     Hints:
     - open the `src/menu-items/menu-items.service.ts` file
-    - a recursive function in php is needed to structure the query results
     - partial or not working answers also get graded so make sure you commit what you have
     Sample response on GET /menu:
     ```json
