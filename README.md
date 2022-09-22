@@ -5,5 +5,3 @@ Get started:
 - run `npm run test` (1 test should succeed and 3 should fail)
 
 - run `npm run migrate` (for 4th task)
-
-- HELLO WORLD

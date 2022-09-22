@@ -17,7 +17,7 @@ export class CinemaSystem1663877813247 implements MigrationInterface {
 
    **Show administration**
    * As a cinema owner I want to run different films at different times
-   * As a cinema owner I want to run multiple films at the same time in different locations
+   * As a cinema owner I want to run multiple films at the same time in different showrooms
 
    **Pricing**
    * As a cinema owner I want to get paid differently per show
